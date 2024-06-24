@@ -13,10 +13,10 @@ body {
   color: #333;
   overflow-x: hidden;
   height: 100vh;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 h2 {
   margin-bottom: 1.5rem;
@@ -38,10 +38,9 @@ h2 {
 }
 
 .container {
-
   width: 50%;
   padding: 2rem;
-  margin: 10% auto;
+  margin: 5% auto;
   background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -61,12 +60,14 @@ h2 {
 
 .container:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-
 }
 
 .option-container {
   width: 100%;
   margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .options {
@@ -74,6 +75,11 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
+}
+
+.options p {
+  margin-bottom: 0.5rem;
+  color: #007bff;
 }
 
 .options select {
@@ -84,16 +90,12 @@ h2 {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
+  background-color: #fff;
 }
 
 .options select:hover {
   border-color: #007bff;
 }
-
-p {
-  margin-bottom: 1.5rem;
-}
-
 
 button {
   padding: 10px 20px;
@@ -103,11 +105,33 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.output-container {
+  margin-top: 2rem;
+  background: #e9f7ff;
+  padding: 1rem;
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .head {
