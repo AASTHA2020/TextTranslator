@@ -67,7 +67,7 @@ function Translator() {
   
         <TextField
           id="outlined-basic"
-          label="Type something hilarious..."
+          label="Give your keyboard a workout..."
           variant="outlined"
           style={{ width: "100%", margin: "1rem 0rem" }}
           value={userInput} // Binding the value to the userInput state
