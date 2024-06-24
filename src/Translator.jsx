@@ -63,7 +63,7 @@ function Translator() {
   return (
     <>
       <div className="container">
-        <h2>🌍 Nitro Translator 🌍</h2>
+        <h2>Linguify👽</h2>
   
         <TextField
           id="outlined-basic"
@@ -86,9 +86,9 @@ function Translator() {
             </select>
           </div>
           <div className="options">
-            <p>Pick the language you want it translated to:</p>
+            <p>Select the language you'd like to translate to:</p>
             <select onChange={(e) => { setDestinationLanguage(e.currentTarget.value) }}>
-              <option value="selected language">Choose the target tongue</option>
+              <option value="selected language">Choose the language you wish to translate to:</option>
               {languages.map((item, index) => {
                 return <option key={index} value={item.code}>{item.name}</option>
               })}
@@ -96,7 +96,7 @@ function Translator() {
           </div>
         </div>
   
-        <button onClick={(e) => { translateText() }}>✨ Translate This! ✨</button>
+        <button onClick={(e) => { translateText() }}>💻Translate This!🔀</button>
   
         {translatedText.length > 0 ?
           <div className="output-container">
